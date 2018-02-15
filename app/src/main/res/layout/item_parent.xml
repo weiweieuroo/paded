@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="head"
+            android:textStyle="bold"
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/button_add"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="add view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
