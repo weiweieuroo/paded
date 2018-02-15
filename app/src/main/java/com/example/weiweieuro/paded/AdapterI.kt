@@ -19,10 +19,21 @@ class AdapterI( mContext: Context) : RecyclerView.Adapter<AdapterI.ViewHolder>()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
          var btn : TextView = view.button_add
+        var h : TextView = view.head
          var areaX : LinearLayout = view.area
          var count : Int = 1
+        init{
 
+        }
         fun setClick(c : Context){
+            h.setOnClickListener {
+                var t = ""
+                for (i in 1 until areaX.childCount) {
+                    var temp = areaX.getChildAt(i) as ChildCustomView
+                    t = "$t ${temp.text.text}"
+                }
+                Toast.makeText(c,"$t",Toast.LENGTH_SHORT).show()
+            }
             btn.setOnClickListener {
                 var tmp = ChildCustomView(c)
                 tmp.setC(count++)
